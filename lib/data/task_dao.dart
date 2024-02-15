@@ -86,4 +86,21 @@ class TaskDao {
       whereArgs: [nomeDaTarefa],
     );
   }
+
+
+  Future<int> update(Task task, String novoNomeDaTarefa, int novaDificuldade, String novaFoto) async {
+    print('Editando a tarefa: ${task.name} para $novoNomeDaTarefa');
+    final Database bancoDeDados = await getDatabase();
+    return bancoDeDados.update(
+      _tableName,
+      {
+        _name: novoNomeDaTarefa,
+        _difficulty: novaDificuldade,
+        _image: novaFoto,
+      },
+      where: '$_name = ?',
+      whereArgs: [task.name],
+    );
+  }
+
 }

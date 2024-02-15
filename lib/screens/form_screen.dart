@@ -122,7 +122,7 @@ class _FormScreenState extends State<FormScreen> {
                     decoration: BoxDecoration(
                       color: Colors.blue,
                       borderRadius: BorderRadius.circular(10),
-                      border: Border.all(width: 2, color: Colors.blue),
+                      border: Border.all(width: 20, color: Colors.blue),
                     ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
